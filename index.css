@@ -1,0 +1,79 @@
+body {  
+    text-align: center;
+    background: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("https://media2.giphy.com/media/xTcnT2ZYSaCTdkTSmI/200w.gif?cid=ecf05e47uvnq2rs67jsw9wprlse29vshf7j2ymrsobcrz6k5&rid=200w.gif");
+}  
+
+:root {
+    --animate-duration: 800ms;
+    --animate-delay: 0.9s;
+}
+
+img {
+    margin-top: 12px;
+}
+
+h1, h2, p, li {
+    font-family: 'Rouge Script', cursive;
+    text-transform: capitalize;
+    color: #d65679;
+    margin-bottom: 0;
+    -webkit-text-stroke-color: black;
+}
+
+h2 {
+    font-size: 45px;
+    -webkit-text-stroke-width: 0.5px;
+}
+
+p {
+    font-size: 30px;
+}
+
+button {
+    margin-top: 12px;
+    color: #d65679;
+    -webkit-text-stroke-width: 0.5px;
+}
+
+li {
+    display: inline-block;
+    font-size: 1.5em;
+    list-style-type: none;
+    padding: 1em;
+    text-transform: uppercase;
+  }
+  
+  li span {
+    display: block;
+    font-size: 4.5rem;
+  }
+
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2) { 
+
+    img {
+        width: 100%;
+    }
+
+    h2{
+        font-size: 50px;
+    }
+
+    h4, h5 {
+        font-size: 40px; 
+    }
+
+    h4 {
+        margin-top: -5px;
+    }
+
+    h5 {
+        margin-top: 10px;
+    }
+
+}
+

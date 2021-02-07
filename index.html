@@ -1,0 +1,135 @@
+<html>  
+<head>  
+<title>Happy Monthsary</title>  
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="index.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css?family=Rouge+Script|Open+Sans:400,600,700" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>  
+  
+<script>  
+function displayRandomImages()   
+{  
+   //array of images with image location, height, and width  
+   var imageArray = [  
+        {   
+            //address URL of the image
+            className: "image animate__animated animate__bounceInDown",
+            src: "image/IMG_20201229_193141_335.jpg",  
+            //size for the image to be display on webpage  
+            width: "580",  
+            height: "500",
+            
+        },   
+        {  
+            className: "image animate__animated animate__flash",
+            src: "image/IMG_20210101_200826_331.jpg",  
+            width: "820",  
+            height: "395",
+        },   
+        {  
+            className: "image animate__animated animate__backInDown",
+            src: "image/IMG_20210101_203732_367.jpg",  
+            width: "520",  
+            height: "295",
+        },
+        { 
+            className: "image animate__animated animate__backInUp", 
+            src: "image/IMG_20201229_121016_304.jpg",  
+            width: "350",  
+            height: "700",
+        }, 
+        {   
+            className: "image animate__animated animate__backInRight",
+            src: "image/IMG_20201229_121027_644.jpg",  
+            width: "520",  
+            height: "395",
+        },
+        {   
+            className: "image animate__animated animate__fadeInTopLeft",
+            src: "image/IMG_20210101_202917_691.jpg",  
+            width: "520",  
+            height: "395",
+        },
+        {   
+            className: "image animate__animated animate__rotateInDownRight",
+            src: "image/IMG_20201230_123417_360.jpg",  
+            width: "520",  
+            height: "395",
+        },
+
+        {   
+            className: "image animate__animated animate__rotateInDownRight",
+            src: "image/received_1359199051078323.jpeg",  
+            width: "520",  
+            height: "995",
+        },
+
+        {   
+            className: "image animate__animated animate__fadeInBottomLeft",
+            src: "image/20201229_091547.jpg",  
+            width: "520",  
+            height: "305",
+        },
+
+
+    ];  
+      
+    //find the length of the array of images  
+    var arrayLength = imageArray.length;  
+    var newArray = [];  
+    for (var i = 0; i < arrayLength; i++) {  
+        newArray[i] = new Image();
+        newArray[i].className = imageArray[i].className;  
+        newArray[i].src = imageArray[i].src;  
+        newArray[i].width = imageArray[i].width;  
+        newArray[i].height = imageArray[i].height;  
+    }  
+     
+  // create random image number  
+  function getRandomNum(min, max)   
+  {  
+      // generate and return a random number for the image to be displayed   
+      imgNo = Math.floor(Math.random() * (max - min + 1)) + min;  
+      return newArray[imgNo];  
+  }    
+  
+  // 0 is first image and (preBuffer.length - 1) is last image of the array  
+  var newImage = getRandomNum(0, newArray.length - 1);  
+   
+  // remove the previous images  
+  var images = document.getElementsByTagName('img');
+  
+  var l = images.length;  
+  for (var p = 0; p < l; p++) {  
+     images[0].parentNode.removeChild(images[0]);  
+  }  
+
+  // display the new random image
+  document.body.appendChild(newImage);
+}
+
+// function addClass() { 
+//     var v = document.document.getElementsByTagName('img'); 
+//     v.className += "addClass"; 
+// } 
+
+</script>  
+
+<body>  
+<div class="animate__animated animate__fadeInDownBig">  
+<h2> Happy 2nd Monthsary Baby </h2>  
+<p> Press the button to display our moments together <br> <p>
+<p> I love you ❤ </p>
+</div>
+
+<button class="animate__animated animate__flipInX animate__delay-1s" onclick="displayRandomImages();"> Click me </button>
+<div class="image-display">
+<script src="script.js"></script>
+<script src="jquery-3.5.1.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</body>
+</html>  
